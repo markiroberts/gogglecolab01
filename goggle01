@@ -1,0 +1,102 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNWeoihRK8RRr5RsToRjnQy",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/markiroberts/gogglecolab01/blob/main/goggle01\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "ryrugOCJE286",
+        "outputId": "53013215-ca5a-4b79-a899-ad06f2abd6a2"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'2.1.0+cu121'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 2
+        }
+      ],
+      "source": [
+        "# Import PyTorch and matplotlib\n",
+        "import torch\n",
+        "from torch import nn\n",
+        "import matplotlib as plt\n",
+        "\n",
+        "# Check PyTorch Version\n",
+        "torch.__version__"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Create device-agnostic code\n",
+        "\n",
+        "This means if we've got access to a GPU, our code will use it"
+      ],
+      "metadata": {
+        "id": "6IweyXq-FUEK"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Setup device agnostic code\n",
+        "device = \"cuda\" if torch.cuda.is_available() else \"cpu\"\n",
+        "print (f\"Device: {device}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hzECjN2LFTog",
+        "outputId": "d01ac947-f7cc-4bc5-f8b0-2ff9846a2a41"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Device: cpu\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
